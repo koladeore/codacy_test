@@ -29,7 +29,7 @@ const estimationHelper = (data, infectedPeople) => {
     (0.35 * totalHospitalBeds) - severeCasesByRequestedTime
   );
   const casesForICUByRequestedTime = Math.trunc(0.05 * infectionsByRequestedTime);
-  const casesForVentilatorsByRequestTime = Math.trunc(0.02 * infectionsByRequestedTime);
+  const casesForVentilatorsByRequestTime = (0.02 * infectionsByRequestedTime);
   const dollarsInFlight = Math.trunc(infectionsByRequestedTime
     * avgDailyIncomePopulation
     * avgDailyIncomeInUSD * periodNormalized);
